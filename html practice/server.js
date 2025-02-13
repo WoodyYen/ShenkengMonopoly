@@ -12,8 +12,13 @@ app.use(cors());
 // 啟用 JSON 解析
 app.use(express.json());
 
-// 靜態文件服務
-app.use(express.static('單元00'));
+// 靜態文件服務，設定讓單元00資料夾可以被訪問
+app.use(express.static('html practice/單元00'));
+
+// 設定根路徑，直接回應 Monopoly.html
+app.get('/', (req, res) => {
+  res.sendFile(__dirname + '/html practice/單元00/Monopoly.html');
+});
 
 // 資料庫配置
 const pool = new Pool({
