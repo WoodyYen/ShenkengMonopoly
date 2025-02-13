@@ -17,7 +17,7 @@ app.use(express.static('html practice/單元00'));
 
 // 設定根路徑，直接回應 Monopoly.html
 app.get('/', (req, res) => {
-  res.sendFile(__dirname + '/html practice/單元00/Monopoly.html');
+  res.sendFile(__dirname + '/html%20practice/單元00/Monopoly.html');
 });
 
 // 資料庫配置
