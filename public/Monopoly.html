@@ -681,7 +681,7 @@
             formData.append("image_description", descriptionInput.value.trim());
 
             try {
-              const response = await fetch("http://localhost:3000/upload", {
+              const response = await fetch("https://shenkengmonopoly-v3tj.onrender.com/upload", {
                 method: "POST",
                 body: formData,
               });
@@ -708,9 +708,6 @@
               
             } catch (error) {
               console.error("上傳錯誤：", error);
-              console.error("錯誤訊息:", error.message);
-              console.error("錯誤狀態碼:", error.response.status);
-              console.error("錯誤狀態訊息:", error.response.statusText);
               alert("上傳失敗，請稍後重試");
             }
           });
