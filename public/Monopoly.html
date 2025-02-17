@@ -619,26 +619,26 @@
           const descriptionInput = entry.querySelector('textarea');
           const uploadButton = entry.querySelector("label");
     
-          uploadButton.addEventListener("click", function () {
-            fileInput.click();
-          });
+          // uploadButton.addEventListener("click", function () {
+          //   fileInput.click();
+          // });
     
-          fileInput.addEventListener("change", function () {
-            if (fileInput.files.length > 0) {
-              const file = fileInput.files[0];
-              const reader = new FileReader();
+          // fileInput.addEventListener("change", function () {
+          //   if (fileInput.files.length > 0) {
+          //     const file = fileInput.files[0];
+          //     const reader = new FileReader();
     
-              reader.onload = function (e) {
-                // 預覽圖片
-                const img = entry.querySelector("img");
-                if (img) {
-                  img.src = e.target.result;
-                }
-              };
+          //     reader.onload = function (e) {
+          //       // 預覽圖片
+          //       const img = entry.querySelector("img");
+          //       if (img) {
+          //         img.src = e.target.result;
+          //       }
+          //     };
     
-              reader.readAsDataURL(file);
-            }
-          });
+          //     reader.readAsDataURL(file);
+          //   }
+          // });
     
           // 提交按鈕 以下是第一版
           // entry.querySelector(".submit-button").addEventListener("click", async function () {
@@ -708,6 +708,9 @@
               
             } catch (error) {
               console.error("上傳錯誤：", error);
+              console.error("錯誤訊息:", error.message);
+              console.error("錯誤狀態碼:", error.response.status);
+              console.error("錯誤狀態訊息:", error.response.statusText);
               alert("上傳失敗，請稍後重試");
             }
           });
