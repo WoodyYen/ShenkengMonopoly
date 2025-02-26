@@ -54,8 +54,8 @@ app.post('/upload', upload.single('image'), async (req, res) => {
     const image_data = req.file.buffer;
 
     const result = await pool.query(
-      'INSERT INTO images (image_name, image_description, image_data) VALUES ($1, $2, $3) RETURNING id',
-      [image_name, image_description, image_data]
+        'INSERT INTO images (image_name, image_description, image_data, upload_time) VALUES ($1, $2, $3, NOW()) RETURNING id',
+        [image_name, image_description, image_data]
     );
 
     res.json({ 
