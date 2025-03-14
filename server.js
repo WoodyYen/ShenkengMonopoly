@@ -26,11 +26,11 @@ app.get('/', (req, res) => {
 
 // 資料庫配置
 const pool = new Pool({
-  host: 'dpg-cumpuelsvqrc73fjitf0-a.singapore-postgres.render.com',
+  host: 'dpg-cv9q5rqn91rc738rqt6g-a.singapore-postgres.render.com',
   port: 5432,
-  user: 'shenkeng20250213_user',
-  password: 'plhZsmsNkoQtcgE7p3h2zbx4c9Y3lPnd',
-  database: 'shenkeng20250213',
+  user: 'shenkend0314_user',
+  password: 'jnC1frlOj063tEVZ4tiyo7hYnGZPp4Rn',
+  database: 'shenkend0314',
   ssl: { rejectUnauthorized: false } // Render 需要 SSL 連線
 });
 
