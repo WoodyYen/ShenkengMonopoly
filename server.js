@@ -25,12 +25,20 @@ app.get('/', (req, res) => {
 });
 
 // 資料庫配置
+// const pool = new Pool({
+//   host: 'dpg-cv9q5rqn91rc738rqt6g-a.singapore-postgres.render.com',
+//   port: 5432,
+//   user: 'shenkend0314_user',
+//   password: 'jnC1frlOj063tEVZ4tiyo7hYnGZPp4Rn',
+//   database: 'shenkend0314',
+//   ssl: { rejectUnauthorized: false } // Render 需要 SSL 連線
+// });
 const pool = new Pool({
-  host: 'dpg-cv9q5rqn91rc738rqt6g-a.singapore-postgres.render.com',
+  host: 'dpg-d28s130gjchc73c24pfg-a.singapore-postgres.render.com',
   port: 5432,
-  user: 'shenkend0314_user',
-  password: 'jnC1frlOj063tEVZ4tiyo7hYnGZPp4Rn',
-  database: 'shenkend0314',
+  user: 'shenkenddb0805_user',
+  password: 'Cu0geemQTiMiPOUmclfrN4YGy53J8AhV',
+  database: 'shenkenddb0805',
   ssl: { rejectUnauthorized: false } // Render 需要 SSL 連線
 });
 
@@ -123,3 +131,4 @@ app.listen(port, () => {
 // app.listen(port, () => {
 //   console.log(`伺服器運行在 http://localhost:${port}`);
 // });
+
